@@ -1,0 +1,2436 @@
+                @import "src/assets/scss/index";
+                .top-header {
+                    background-color: $topBarBgColor;
+                    color: $topBarTextColor;
+                    // max-height: 31.48px;
+                    // height: auto;
+                    .header-wrapper {
+                        .left-info {
+                            list-style-type: none;
+                            margin-bottom: 0px;
+                            padding-left: 0px;
+                            //  padding: 4px 0px;
+                            li {
+                                // padding: 7px 8px;
+                                padding: 4px 10px;
+                                a {
+                                    text-decoration: none;
+                                    color: white;
+                                    &:hover {
+                                        color: red!important;
+                                        transition: all 1s;
+                                    }
+                                }
+                                &:hover {
+                                    color: red!important;
+                                    transition: all 1s;
+                                }
+                            }
+                            .search {
+                                padding-right: 12px;
+                            }
+                            .account {
+                                a {
+                                    span {
+                                        display: block;
+                                        margin: -8px 0 -8px -9px;
+                                    }
+                                }
+                            }
+                            .language {
+                                padding-left: 0px;
+                                .lang {
+                                    font-size: 13px;
+                                }
+                            }
+                            .onSelectLang {
+                                width: 57.53px;
+                                height: 31px;
+                                display: flex;
+                                background-color: #e5e5e5;
+                                width: 56.53px;
+                                justify-content: center;
+                                font-size: 18px;
+                                align-items: center;
+                                i {
+                                    // background-color: white;
+                                    color: black;
+                                }
+                                span {
+                                    &.icon-cancel:before {
+                                        font-size: 1rem;
+                                        border-color: #2d2d2d !important;
+                                        padding: 3px 3.5px;
+                                        border-width: 2px !important;
+                                        border-radius: 100%;
+                                        border-style: solid;
+                                        color: #2d2d2d;
+                                    }
+                                }
+                            }
+                            .onSelectSearch {
+                                width: 30px;
+                                height: 31px;
+                                display: flex;
+                                background-color: #e5e5e5;
+                                width: 56.53px;
+                                justify-content: center;
+                                font-size: 18px;
+                                align-items: center;
+                                i {
+                                    // background-color: white;
+                                    color: black;
+                                }
+                                span {
+                                    &.icon-cancel:before {
+                                        font-size: 1rem;
+                                        border-color: #2d2d2d !important;
+                                        padding: 3px 3.5px;
+                                        border-width: 2px !important;
+                                        border-radius: 100%;
+                                        border-style: solid;
+                                        color: #2d2d2d;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right-info {
+                        list-style-type: none;
+                        // padding: 6px 0px;
+                        // padding: 4px 0px;
+                        margin-bottom: 0px;
+                        li {
+                            // margin: 0px 10px;
+                            // height: 21px;
+                            padding: 4px 6px;
+                            a {
+                                text-decoration: none;
+                                background-color: #ffffff;
+                                border-color: #ffffff;
+                                font-size: 11.4px;
+                                padding: 2.6px 13px;
+                                line-height: 0.14px;
+                                border-radius: 28px;
+                                color: #000000;
+                                text-transform: uppercase;
+                                font-family: $primary-font;
+                                &:hover {
+                                    background-color: #ffffff!important;
+                                    transition: all 1s;
+                                }
+                            }
+                        }
+                        .contact a {
+                            background-color: #ffbc46!important;
+                            transition: all 1s;
+                            margin-right: 8px;
+                            &:hover {
+                                background-color: #ffffff!important;
+                                transition: all 1s;
+                            }
+                        }
+                        .career a:hover {
+                            background-color: #ffbc46!important;
+                            transition: all 1s;
+                        }
+                        .country {
+                            .india-flag {
+                                width: 30px;
+                                height: 20px;
+                                background-image: url("../../../../assets/images/header/country-flag/india-flag.png");
+                                background-repeat: no-repeat;
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-right: 0.1rem;
+                                line-height: 1.6rem;
+                            }
+                            .phone-no {
+                                font-size: 11.7px;
+                                font-family: $primary-font;
+                            }
+                        }
+                    }
+                }
+                
+                // onclick Top Bar Language
+                .lg {
+                    background-color: #e5e5e5;
+                    padding: 33px 0px;
+                    transition: 0.5s;
+                    position: relative;
+                    top: -68px;
+                    z-index: 2;
+                    &.isLangActive {
+                        background-color: #e5e5e5;
+                        padding: 33px 0px;
+                        transition: .5s;
+                        position: absolute;
+                        top: 31px !important;
+                        left: 0px;
+                        right: 0px;
+                    }
+                    &.isLangNotActive {
+                        // background-color: green;
+                        background-color: #e5e5e5;
+                        padding: 33px 0px;
+                        transition: .5s;
+                        position: absolute;
+                        top: -1000px !important;
+                        left: 0px;
+                        right: 0px;
+                    }
+                    .lg-wrapper {
+                        .lg-navLinks {
+                            list-style-type: none;
+                            margin: 0px;
+                            padding: 0px;
+                            li {
+                                padding: 0 10px;
+                                // margin: 0px;
+                                a {
+                                    font-size: 13px;
+                                    color: #2d2d2d;
+                                    &:hover {
+                                        color: #e23434;
+                                    }
+                                }
+                            }
+                            .select {
+                                padding-left: 0px;
+                                font-size: 16.9px;
+                                color: #2d2d2d !important;
+                                margin: 0 26px 0 0;
+                                font-family: $primary-font;
+                            }
+                            .english {
+                                padding: 0 0px;
+                                a {
+                                    color: #e23434;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                // onclick Top Bar Search
+                .searchTopBar {
+                    background-color: #e5e5e5;
+                    // padding: 33px 0px;
+                    padding: 7px 0px;
+                    transition: 2s;
+                    position: absolute;
+                    top: -1000px !important;
+                    left: 0px;
+                    right: 0px;
+                    z-index: 2;
+                    .searchTopBar-wrapper {
+                        // background-color: red;
+                        // transition: 0.5s;
+                        // position: absolute;
+                        // margin: auto;
+                        // left: 0;
+                        // right: 0;
+                        // top: 0;
+                        //Angular Materilal
+                        .example-container {
+                            display: flex;
+                            flex-direction: column;
+                            color: black;
+                        }
+                        .example-container>* {
+                            width: 60%;
+                        }
+                        //Angular Materilal ends
+                        .submit-btn {
+                            .btn {
+                                // width: 160px;
+                                // padding: 1px;
+                                // background-color: #2d2d2d;
+                                // color: white;
+                                // padding: 11px 18px;\
+                                padding: 0.5rem 2rem;
+                                font-size: 1.3rem;
+                                text-transform: uppercase;
+                                width: 10rem;
+                                -webkit-appearance: none;
+                                border-radius: 0;
+                                background: #2d2d2d;
+                                border-color: #2d2d2d;
+                                color: white;
+                                position: relative;
+                                top: -18px;
+                            }
+                        }
+                    }
+                    &.activeSearch {
+                        background-color: #e5e5e5;
+                        padding: 33px 0px;
+                        transition: .5s;
+                        position: absolute;
+                        top: 31px !important;
+                        left: 0px;
+                        right: 0px;
+                    }
+                    &.notactiveSearch {
+                        // background-color: green;
+                        background-color: #e5e5e5;
+                        padding: 33px 0px;
+                        transition: .5s;
+                        position: absolute;
+                        top: -1000px !important;
+                        left: 0px;
+                        right: 0px;
+                    }
+                }
+                
+                .account {
+                    // background-color: #e5e5e5;
+                    // &.accountActive {
+                    //     position: relative;
+                    //     top: 90px;
+                    // }
+                    &.accountActive {
+                        background-color: #e5e5e5;
+                        padding: 33px 0px;
+                        transition: .5s;
+                        position: absolute;
+                        top: 31px !important;
+                        left: 0px;
+                        right: 0px;
+                        z-index: 2;
+                    }
+                    &.accountNotActive {
+                        // background-color: green;
+                        background-color: #e5e5e5;
+                        padding: 33px 0px;
+                        transition: .5s;
+                        position: absolute;
+                        top: -1000px !important;
+                        left: 0px;
+                        right: 0px;
+                    }
+                    .login-drop {
+                        .login-info-title {
+                            color: #2c2c2c;
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-weight: 400;
+                            font-size: 2rem;
+                            margin-bottom: 0;
+                            span {
+                                font-weight: 600;
+                            }
+                            &:after {
+                                height: 2px;
+                                width: 7rem;
+                                content: "";
+                                display: block;
+                                margin: 1rem auto;
+                                background: #ea501a;
+                            }
+                        }
+                        .company-achive {
+                            display: block;
+                            position: relative;
+                            height: 100%;
+                            display: flex;
+                            .achieve-block {
+                                width: 20%;
+                                display: flex;
+                                flex-direction: column;
+                                margin-right: 35px;
+                                .circle-content {
+                                    margin-top: 1rem;
+                                    .founded-circle {
+                                        width: 94px;
+                                        height: 94px;
+                                        border-radius: 180px;
+                                        border: 2px solid #000;
+                                        text-align: center;
+                                        margin: 18px auto 0 auto;
+                                        .circle-img {
+                                            background: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/header-icon.svg) no-repeat;
+                                            background-size: 71rem;
+                                            height: 48px;
+                                            background-position: 1.5rem 0rem;
+                                            display: block;
+                                        }
+                                        span {
+                                            display: inline-block;
+                                            font-family: "Lato-Bold";
+                                            color: #000000;
+                                        }
+                                    }
+                                    .found-tagline {
+                                        width: 152px;
+                                        height: auto;
+                                        margin: 7px auto;
+                                        .year {
+                                            float: left;
+                                            background: none;
+                                            padding: 0px;
+                                            font-weight: 600;
+                                            width: 29%;
+                                            font-size: 1.4rem;
+                                        }
+                                        .exllence {
+                                            text-align: left;
+                                            font-weight: 600;
+                                            float: right;
+                                            width: 71%;
+                                            font-size: 0.8rem;
+                                        }
+                                        .clearfix {}
+                                    }
+                                }
+                                .achieve-block-content {
+                                    .achive-bottom {
+                                        .left {
+                                            float: left;
+                                            width: 18px;
+                                            height: 73px;
+                                            background: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/left-bracket.png);
+                                            background-repeat: no-repeat;
+                                        }
+                                        .achive-bottom-content {
+                                            text-transform: uppercase;
+                                            font-size: 3.1rem;
+                                            font-family: "Lato-Black";
+                                            float: left;
+                                            width: 79%;
+                                            text-align: center;
+                                            .repeat-business {
+                                                display: block;
+                                                font-weight: 600;
+                                                font-size: 0.9rem;
+                                            }
+                                        }
+                                        .right {
+                                            float: right;
+                                            width: 18px;
+                                            height: 73px;
+                                            background: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/right-bracket.png);
+                                            background-repeat: no-repeat;
+                                        }
+                                    }
+                                }
+                            }
+                            .achieve-block1 {
+                                border-left: 1px solid grey;
+                                border-right: 1px solid grey;
+                                .achieve-block-content1 {
+                                    .block-data {
+                                        @include block-data;
+                                        border-bottom: 1px solid grey;
+                                        .tag {
+                                            @include tag;
+                                        }
+                                        .caption {
+                                            @include caption;
+                                        }
+                                    }
+                                }
+                                .achieve-block-content2 {
+                                    .block-data {
+                                        @include block-data;
+                                        .icon-block-cont {
+                                            @include icon-block-cont;
+                                            .sec-icon {
+                                                width: 35%;
+                                                display: inline-block;
+                                                float: left;
+                                                //background: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/header-icon.svg) no-repeat;
+                                                //background-size: 71rem;
+                                                background: url(../../../../assets/images/header/account-info/cmmii.png) no-repeat;
+                                                margin-left: 15px;
+                                                text-align: center;
+                                                // height: 76px;
+                                                height: 59px;
+                                                background-position: right;
+                                            }
+                                            .sec-icon-content {
+                                                @include sec-icon-content;
+                                                .tag {
+                                                    @include tag;
+                                                }
+                                                .caption {
+                                                    @include caption;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .achieve-block2 {
+                                .achieve-block-content1 {
+                                    .block-data {
+                                        @include block-data;
+                                        border-bottom: 1px solid grey;
+                                        border-bottom: 1px solid grey;
+                                        .tag {
+                                            @include tag;
+                                        }
+                                        .caption {
+                                            @include caption;
+                                        }
+                                    }
+                                }
+                                .achieve-block-content2 {
+                                    .block-data {
+                                        @include block-data;
+                                        .icon-block-cont {
+                                            @include icon-block-cont;
+                                            .sec-icon {
+                                                width: 35%;
+                                                display: inline-block;
+                                                float: left;
+                                                //background: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/header-icon.svg) no-repeat;
+                                                // background-size: 71rem;
+                                                background: url(../../../../assets/images/header/account-info/iso-img.png) no-repeat;
+                                                margin-left: 15px;
+                                                text-align: center;
+                                                height: 59px;
+                                                background-position: right;
+                                            }
+                                            .sec-icon-content {
+                                                @include sec-icon-content;
+                                                .tag {
+                                                    @include tag;
+                                                }
+                                                .caption {
+                                                    @include caption;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .achieve-block3 {
+                                border-left: 1px solid grey;
+                                border-right: 1px solid grey;
+                                .achieve-block-content1 {
+                                    .block-data {
+                                        @include block-data;
+                                        border-bottom: 1px solid grey;
+                                        .tag {
+                                            @include tag;
+                                        }
+                                        .caption {
+                                            @include caption;
+                                        }
+                                    }
+                                }
+                                .achieve-block-content2 {
+                                    .block-data {
+                                        @include block-data;
+                                        .icon-block-cont {
+                                            @include icon-block-cont;
+                                            .sec-icon {
+                                                width: 35%;
+                                                display: inline-block;
+                                                float: left;
+                                                //background: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/header-icon.svg) no-repeat;
+                                                //  background-size: 71rem;
+                                                background: url(../../../../assets/images/header/account-info/emp-img.png) no-repeat;
+                                                margin-left: 15px;
+                                                text-align: center;
+                                                height: 59px;
+                                                background-position: right;
+                                            }
+                                            .sec-icon-content {
+                                                @include sec-icon-content;
+                                                .tag {
+                                                    @include tag;
+                                                }
+                                                .caption {
+                                                    @include caption;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .achieve-block4 {
+                                // border-left: 1px solid grey;
+                                border-right: 1px solid grey;
+                                .achieve-block-content1 {
+                                    .block-data {
+                                        @include block-data;
+                                        border-bottom: 1px solid grey;
+                                        .tag {
+                                            @include tag;
+                                        }
+                                        .caption {
+                                            @include caption;
+                                        }
+                                    }
+                                }
+                                .achieve-block-content2 {
+                                    .block-data {
+                                        @include block-data;
+                                        .icon-block-cont {
+                                            @include icon-block-cont;
+                                            .sec-icon {
+                                                width: 35%;
+                                                display: inline-block;
+                                                float: left;
+                                                //background: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/header-icon.svg) no-repeat;
+                                                //background-size: 71rem;
+                                                background: url(../../../../assets/images/header/account-info/customor-img.png) no-repeat;
+                                                margin-left: 15px;
+                                                text-align: center;
+                                                height: 59px;
+                                                background-position: right;
+                                            }
+                                            .sec-icon-content {
+                                                @include sec-icon-content;
+                                                .tag {
+                                                    @include tag;
+                                                }
+                                                .caption {
+                                                    @include caption;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .login-procudure {
+                        padding: 20px 0;
+                        width: 100%;
+                        height: 82px;
+                        -webkit-box-shadow: 2px 2px 1px #d49202;
+                        box-shadow: 2px 2px 1px #d49202;
+                        background: #f7a900;
+                        margin-bottom: -2rem;
+                        margin-top: 31px;
+                        .login-procudure-container {
+                            .steps1 {
+                                @include steps;
+                                &:before {
+                                    @include stepsBefore;
+                                }
+                                &:after {
+                                    @include stepsAfter;
+                                }
+                                .step-icon {
+                                    float: left;
+                                    text-align: center;
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-box-direction: normal;
+                                    -ms-flex-direction: column;
+                                    flex-direction: column;
+                                    width: 25%;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    justify-content: center;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    // background: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/header-icon.svg) no-repeat;
+                                    //background-size: 75rem;
+                                    background: url(../../../../assets/images/header/account-info/step1.png) no-repeat;
+                                    height: 51px;
+                                    display: inline-block;
+                                }
+                                .steps-text {
+                                    @include step-text;
+                                }
+                            }
+                            .steps2 {
+                                @include steps;
+                                &:before {
+                                    @include stepsBefore;
+                                }
+                                &:after {
+                                    @include stepsAfter;
+                                }
+                                .step-icon {
+                                    float: left;
+                                    text-align: center;
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-box-direction: normal;
+                                    -ms-flex-direction: column;
+                                    flex-direction: column;
+                                    width: 25%;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    justify-content: center;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    // background: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/header-icon.svg) no-repeat;
+                                    // background-size: 75rem;
+                                    background: url(../../../../assets/images/header/account-info/step-img2.png) no-repeat;
+                                    height: 51px;
+                                    display: inline-block;
+                                }
+                                .steps-text {
+                                    @include step-text;
+                                }
+                            }
+                            .steps3 {
+                                @include steps;
+                                &:before {
+                                    @include stepsBefore;
+                                }
+                                &:after {
+                                    @include stepsAfter;
+                                }
+                                .step-icon {
+                                    float: left;
+                                    text-align: center;
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-box-direction: normal;
+                                    -ms-flex-direction: column;
+                                    flex-direction: column;
+                                    width: 25%;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    justify-content: center;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    // background: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/header-icon.svg) no-repeat;
+                                    // background-size: 75rem;
+                                    // height: 76px;\
+                                    background: url(../../../../assets/images/header/account-info/step-img3.png) no-repeat;
+                                    height: 51px;
+                                    display: inline-block;
+                                }
+                                .steps-text {
+                                    @include step-text;
+                                }
+                            }
+                            .steps4 {
+                                @include steps;
+                                text-align: center;
+                                -webkit-box-pack: end;
+                                -ms-flex-pack: end;
+                                justify-content: flex-end;
+                                .step-btn {
+                                    margin-top: -5px;
+                                    border-bottom: 4px solid #a00b0f;
+                                    width: 60%;
+                                    padding: 9px 1rem;
+                                    -webkit-box-shadow: 0 6px #a00b0f;
+                                    box-shadow: 0 6px #a00b0f;
+                                    position: relative;
+                                    -webkit-transition: none;
+                                    transition: none;
+                                    outline: none;
+                                    border: none;
+                                    -webkit-appearance: none;
+                                    border-radius: 0;
+                                    background: #ee2e2b;
+                                    color: #fff;
+                                    &:hover {
+                                        top: 2px;
+                                        box-shadow: 0 4px #a00b0f;
+                                        transition: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .countryTopBar {
+                    background-color: #e5e5e5;
+                    padding: 25.5px 0px;
+                    transition: 0.5s;
+                    position: relative;
+                    top: -68px;
+                    z-index: 2;
+                    .countryTopBar-wrapper {
+                        ul {
+                            list-style-type: none;
+                            padding: 0px;
+                            margin: 0px;
+                            .first {
+                                padding: 0px 35px 0px 0px;
+                                color: #e23434;
+                                font-size: 15.6px;
+                            }
+                            li {
+                                padding: 0px 35px;
+                                margin: 0px;
+                                a {
+                                    font-size: 13px;
+                                    color: #2d2d2d;
+                                    &:hover {
+                                        color: #e23434;
+                                    }
+                                }
+                                .flag-india {
+                                    width: 33px;
+                                    height: 20px;
+                                    display: inline-block;
+                                    background-image: url("../../../../assets/images/header/country-flag/india-flag.png");
+                                    vertical-align: middle;
+                                    margin-right: 0.5rem;
+                                }
+                                .flag-us {
+                                    width: 33px;
+                                    height: 20px;
+                                    display: inline-block;
+                                    background-image: url("../../../../assets/images/header/country-flag/us.png");
+                                    vertical-align: middle;
+                                    margin-right: 0.5rem;
+                                }
+                                .flag-uk {
+                                    width: 33px;
+                                    height: 20px;
+                                    display: inline-block;
+                                    background-image: url("../../../../assets/images/header/country-flag/uk.png");
+                                    vertical-align: middle;
+                                    margin-right: 0.5rem;
+                                }
+                                .flag-au {
+                                    width: 33px;
+                                    height: 20px;
+                                    display: inline-block;
+                                    background-image: url("../../../../assets/images/header/country-flag/au.png");
+                                    vertical-align: middle;
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                //Top bar onclick ends
+                // Main heders Starts
+                .main-header {
+                    // background-color: rosybrown;
+                    height: 67px;
+                    border-bottom: 0.1px solid #707070;
+                    .main-header-wrapper {
+                        .logo {
+                            display: inline-block;
+                            float: left;
+                            a {
+                                width: 118px;
+                                height: 30px;
+                                line-height: 67px;
+                                img {
+                                    width: 118px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                        .nav-links {
+                            display: inline-block;
+                            float: left;
+                            ul {
+                                .nav-list.active::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 0;
+                                    height: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    margin: auto;
+                                    border-left: 9px solid transparent;
+                                    border-right: 9px solid transparent;
+                                    border-bottom: 9px solid #212223;
+                                }
+                                display: flex;
+                                list-style-type: none;
+                                text-transform: uppercase;
+                                li {
+                                    position: relative;
+                                    // margin-right: 6px;
+                                    margin: 0 6.5px;
+                                    line-height: 67px;
+                                    width: 152px;
+                                    a {
+                                        color: $DefaulttextColor;
+                                        font-family: $primary-font;
+                                        font-size: 13px;
+                                        text-decoration: none;
+                                        position: relative;
+                                        &:hover {
+                                            color: $topBarTextColor;
+                                            background-color: $topBarBgColor;
+                                            font-family: $primary-font;
+                                            font-size: 13px;
+                                            text-decoration: none;
+                                            padding: 4px 14px;
+                                            border-radius: 28px;
+                                        }
+                                        .icon {
+                                            font-size: 18px;
+                                            position: relative;
+                                            top: 4px;
+                                        }
+                                    }
+                                    &.isTechnology {
+                                        a {
+                                            color: $topBarTextColor;
+                                            background-color: $topBarBgColor;
+                                            font-size: 13px;
+                                            text-decoration: none;
+                                            padding: 4px 14px;
+                                            border-radius: 28px;
+                                            &:hover {
+                                                color: $topBarTextColor;
+                                                background-color: $topBarBgColor;
+                                                font-family: $primary-font;
+                                                font-size: 13px;
+                                                text-decoration: none;
+                                                padding: 4px 14px;
+                                                border-radius: 28px;
+                                            }
+                                            .icon {
+                                                font-size: 19px;
+                                                color: #D0D0D0;
+                                            }
+                                        }
+                                    }
+                                    // isWhatWeDoActive
+                                    &.isWeWorkWithActive {
+                                        a {
+                                            color: $topBarTextColor;
+                                            background-color: $topBarBgColor;
+                                            font-size: 13px;
+                                            text-decoration: none;
+                                            padding: 4px 14px;
+                                            border-radius: 28px;
+                                            &:hover {
+                                                color: $topBarTextColor;
+                                                background-color: $topBarBgColor;
+                                                font-family: $primary-font;
+                                                font-size: 13px;
+                                                text-decoration: none;
+                                                padding: 4px 14px;
+                                                border-radius: 28px;
+                                            }
+                                            .icon {
+                                                font-size: 19px;
+                                                color: #D0D0D0;
+                                            }
+                                        }
+                                    }
+                                    &.isWhatWeDoActive {
+                                        a {
+                                            color: $topBarTextColor;
+                                            background-color: $topBarBgColor;
+                                            font-size: 13px;
+                                            text-decoration: none;
+                                            padding: 4px 14px;
+                                            border-radius: 28px;
+                                            &:hover {
+                                                color: $topBarTextColor;
+                                                background-color: $topBarBgColor;
+                                                font-family: $primary-font;
+                                                font-size: 13px;
+                                                text-decoration: none;
+                                                padding: 4px 14px;
+                                                border-radius: 28px;
+                                            }
+                                            .icon {
+                                                font-size: 19px;
+                                                color: #D0D0D0;
+                                            }
+                                        }
+                                    }
+                                    &.isWhoWeAreActive {
+                                        position: relative;
+                                        color: $topBarTextColor;
+                                        a {
+                                            color: $topBarTextColor;
+                                            background-color: $topBarBgColor;
+                                            font-size: 13px;
+                                            text-decoration: none;
+                                            padding: 4px 14px;
+                                            border-radius: 28px;
+                                            &:hover {
+                                                color: $topBarTextColor;
+                                                background-color: $topBarBgColor;
+                                                font-family: $primary-font;
+                                                font-size: 13px;
+                                                text-decoration: none;
+                                                padding: 4px 14px;
+                                                border-radius: 28px;
+                                            }
+                                            .icon {
+                                                font-size: 19px;
+                                                color: #D0D0D0;
+                                            }
+                                        }
+                                    }
+                                    &.isTechnologyNotActive {
+                                        margin-right: 10px;
+                                        line-height: 67px;
+                                        width: 143px;
+                                        a {
+                                            color: $DefaulttextColor;
+                                            font-family: $primary-font;
+                                            font-size: 13px;
+                                            text-decoration: none;
+                                            &:hover {
+                                                color: $topBarTextColor;
+                                                background-color: $topBarBgColor;
+                                                font-family: $primary-font;
+                                                font-size: 13px;
+                                                text-decoration: none;
+                                                padding: 4px 14px;
+                                                border-radius: 28px;
+                                            }
+                                        }
+                                    }
+                                    &.isWeWorkWithNotActive {
+                                        margin-right: 10px;
+                                        line-height: 67px;
+                                        width: 146px;
+                                        a {
+                                            color: $DefaulttextColor;
+                                            font-family: $primary-font;
+                                            font-size: 13px;
+                                            text-decoration: none;
+                                            &:hover {
+                                                color: $topBarTextColor;
+                                                background-color: $topBarBgColor;
+                                                font-family: $primary-font;
+                                                font-size: 13px;
+                                                text-decoration: none;
+                                                padding: 4px 14px;
+                                                border-radius: 28px;
+                                            }
+                                        }
+                                    }
+                                    &.isWhatWeDoNotActive {
+                                        margin-right: 10px;
+                                        line-height: 67px;
+                                        width: 143px;
+                                        a {
+                                            color: $DefaulttextColor;
+                                            font-family: $primary-font;
+                                            font-size: 13px;
+                                            text-decoration: none;
+                                            &:hover {
+                                                color: $topBarTextColor;
+                                                background-color: $topBarBgColor;
+                                                font-family: $primary-font;
+                                                font-size: 13px;
+                                                text-decoration: none;
+                                                padding: 4px 14px;
+                                                border-radius: 28px;
+                                            }
+                                        }
+                                    }
+                                    &.isWhoWeAreNotActive {
+                                        margin-right: 10px;
+                                        line-height: 67px;
+                                        width: 143px;
+                                        a {
+                                            color: $DefaulttextColor;
+                                            font-family: $primary-font;
+                                            font-size: 13px;
+                                            text-decoration: none;
+                                            &:hover {
+                                                color: $topBarTextColor;
+                                                background-color: $topBarBgColor;
+                                                font-family: $primary-font;
+                                                font-size: 13px;
+                                                text-decoration: none;
+                                                padding: 4px 14px;
+                                                border-radius: 28px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .whoWeAre {
+                                    a {
+                                        &::after {
+                                            content: "";
+                                            display: block;
+                                            margin: auto;
+                                            height: 2px;
+                                            width: 0;
+                                            background: transparent;
+                                            -webkit-transition: width 0.5s ease, background-color 0.5s ease;
+                                            transition: width 0.5s ease, background-color 0.5s ease;
+                                            position: absolute;
+                                            bottom: -30px;
+                                            left: calc(50% - 5px);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .cmmi {
+                            display: inline-block;
+                            float: left;
+                            width: 78px;
+                            height: 71.5px;
+                            background-color: $topBarBgColor;
+                            color: $topBarTextColor;
+                            margin-right: 10px;
+                            text-align: center;
+                            position: relative;
+                            left: 138px;
+                            z-index: 1;
+                            border-bottom: 1px solid #e5e5e5;
+                            border-right: 1px solid #e5e5e5;
+                            border-left: 1px solid #e5e5e5;
+                            p {
+                                font-family: $primary-font;
+                                font-size: 13px;
+                                margin: 1px;
+                            }
+                            .count {
+                                font-size: 26px;
+                                font-family: $primary-font;
+                            }
+                        }
+                        .exp {
+                            display: inline-block;
+                            float: left;
+                            width: 77px;
+                            height: 71.5px;
+                            background-color: red;
+                            color: $topBarTextColor;
+                            text-align: center;
+                            position: relative;
+                            left: 139px;
+                            z-index: 1;
+                            border-bottom: 1px solid #e5e5e5;
+                            border-right: 1px solid #e5e5e5;
+                            border-left: 1px solid #e5e5e5;
+                            p {
+                                font-family: $primary-font;
+                                font-size: 10.4px;
+                                margin: 1px;
+                                sup {
+                                    font-size: 18.2px;
+                                    font-family: $primary-font;
+                                }
+                            }
+                            .count {
+                                font-size: 26px;
+                                font-family: $primary-font;
+                            }
+                        }
+                    }
+                } // Main heders ends Starts
+                // Onclick event of Main Headers...
+                .who-we-are {
+                    background-color: #212223;
+                    color: #d5d5d5;
+                    position: fixed;
+                    top: 97px;
+                    background-image: url("..../../../../../../assets/images/header/dropdown-bg.png");
+                    background-repeat: no-repeat;
+                    background-position: bottom;
+                    height: 873px;
+                    background-size: contain;
+                    .topWrapper {
+                        width: 100%;
+                        .topWrapperRow {
+                            @include padding-marging;
+                            .firstCol {
+                                @include padding-marging;
+                                .company-title {
+                                    @include title;
+                                }
+                                .comapny-submenu {
+                                    @include common-submenu-ul;
+                                    margin-left: -12px !important;
+                                    li {
+                                        background: none;
+                                        border: 0;
+                                        box-sizing: border-box;
+                                        margin: 1em;
+                                        padding: 1em 2em;
+                                        box-shadow: inset 0 0 0 1px grey;
+                                        font-size: inherit;
+                                        font-weight: 700;
+                                        position: relative;
+                                        vertical-align: middle;
+                                        width: 42%;
+                                        height: 52px;
+                                        margin-bottom: 7px;
+                                        margin-right: 7px;
+                                        display: flex;
+                                        align-items: center;
+                                        flex-direction: row;
+                                        padding: 0px 17px;
+                                        position: relative;
+                                        cursor: pointer;
+                                        transition: 0.5s;
+                                        a {
+                                            font-family: $primary-font;
+                                            font-weight: 400;
+                                            color: #d5d5d5;
+                                            font-size: 14.62px;
+                                        }
+                                        .Icon {
+                                            min-width: 63px;
+                                            // height: 30px;
+                                            .img-first {
+                                                height: 26px !important;
+                                            }
+                                            .img-second {
+                                                height: 36px !important;
+                                            }
+                                            .img-third {
+                                                height: 33px !important;
+                                            }
+                                            .img-forth {
+                                                height: 35px !important;
+                                            }
+                                            .img-fifth {
+                                                height: 48px !important;
+                                            }
+                                            .img-six {
+                                                height: 39px !important;
+                                            }
+                                            .img-seven {
+                                                height: 38px !important;
+                                            }
+                                            .img-eight {
+                                                height: 36px !important;
+                                            }
+                                        }
+                                    }
+                                    li:hover a {
+                                        color: #e23434;
+                                        transition: all .5s;
+                                    }
+                                    li::before,
+                                    li::after {
+                                        box-sizing: inherit;
+                                        content: '';
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    .draw {
+                                        transition: color 0.25s;
+                                    }
+                                    .draw::before,
+                                    .draw::after {
+                                        border: 2px solid transparent;
+                                        width: 0;
+                                        height: 0;
+                                    }
+                                    .draw::before {
+                                        top: 0;
+                                        left: 0;
+                                    }
+                                    .draw::after {
+                                        bottom: 0;
+                                        right: 0;
+                                    }
+                                    .draw:hover {
+                                        color: #60daaa;
+                                    }
+                                    .draw:hover::before,
+                                    .draw:hover::after {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    .draw:hover::before {
+                                        border-top-color: #60daaa;
+                                        border-right-color: #60daaa;
+                                        transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+                                    }
+                                    .draw:hover::after {
+                                        border-bottom-color: #60daaa;
+                                        border-left-color: #60daaa;
+                                        transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+                                    }
+                                    .meet:hover {
+                                        color: #e23434;
+                                    }
+                                    .meet::after {
+                                        top: 0;
+                                        left: 0;
+                                    }
+                                    .meet:hover::before {
+                                        border-top-color: #e23434;
+                                        border-right-color: #e23434;
+                                    }
+                                    .meet:hover::after {
+                                        border-bottom-color: #e23434;
+                                        border-left-color: #e23434;
+                                        transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+                                    }
+                                }
+                            }
+                            .secondCol {
+                                @include padding-marging;
+                                color: #D5d5d5;
+                                .company-title {
+                                    @include title;
+                                }
+                                .cmpInfo {
+                                    list-style-type: none;
+                                    @include padding-marging;
+                                    li {
+                                        margin: 0px;
+                                        padding: 2.8px 0px;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        // align-items: center;
+                                        &::before {
+                                            content: "\2022";
+                                            color: red;
+                                            font-weight: bold;
+                                            display: block;
+                                            width: 1rem;
+                                            margin-left: 2px;
+                                            font-size: 10px;
+                                        }
+                                    }
+                                }
+                                p {
+                                    padding-top: 25px;
+                                    .vision-mission-btn {
+                                        @include common-btn;
+                                        &:hover {
+                                            @include common-btn-hover;
+                                        }
+                                    }
+                                }
+                            }
+                            .thirdCol {
+                                @include padding-marging;
+                                .company-title {
+                                    @include title;
+                                }
+                                .workInfo {
+                                    color: #D5d5d5;
+                                }
+                                .grow {
+                                    padding: 1rem 0 0;
+                                }
+                                .opening-para {
+                                    padding-top: 25px;
+                                    .opening-btn {
+                                        @include common-btn;
+                                        background-color: #e23434;
+                                        color: white !important;
+                                        &:hover {
+                                            @include common-btn-hover;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .bottomWrapper {
+                        padding: 30px 0 0 0;
+                        .quick-link {
+                            @include title;
+                            margin-right: 20px;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                        .quick-link-content {
+                            // padding: 41px 0 42px;
+                            // border-left: solid 2px #524d4d;
+                            padding: 27px 0 42px;
+                            border-left: solid 1px #524d4d;
+                            display: column;
+                            align-items: center;
+                            ul {
+                                display: flex;
+                                list-style-type: none;
+                                padding-top: 0px !important;
+                                padding-bottom: 0px !important;
+                                margin-bottom: 0px !important;
+                                li {
+                                    // padding: 0px 19px;
+                                    display: inline-block;
+                                    background: #fff;
+                                    margin-right: 5px;
+                                    text-align: center;
+                                    margin-top: 0;
+                                    color: #212223;
+                                    a {
+                                        width: 100%;
+                                        height: 23px;
+                                        padding: 0 2rem;
+                                        display: flex;
+                                        align-items: center;
+                                        line-height: 1.8;
+                                        color: #2d2d2d;
+                                        &:hover {
+                                            background-color: #e23434;
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } //Who we are ends..
+                .what-we-do {
+                    background-color: #212223;
+                    // color: #d5d5d5;
+                    position: fixed;
+                    top: 97px;
+                    background-image: url("..../../../../../../assets/images/header/dropdown-bg.png");
+                    background-repeat: no-repeat;
+                    background-position: bottom;
+                    /* width: 100%; */
+                    height: 873px;
+                    background-size: contain;
+                    .topWrapper {
+                        .dropdown-title {
+                            @include title;
+                        }
+                        .whoAreInfo {
+                            display: flex;
+                            justify-content: flex-start;
+                            .leftInfo {
+                                display: flex;
+                                flex-direction: column;
+                                width: 25%;
+                                margin-right: 3%;
+                                .leftInfoDiv1 {
+                                    @include LeftRightInfo;
+                                    h3 {
+                                        @include LeftRightH3;
+                                    }
+                                    .more-arrow {
+                                        @include more-arrow;
+                                        .icon {
+                                            font-size: 23px;
+                                        }
+                                    }
+                                }
+                                .leftInfoDiv2 {
+                                    @include LeftRightInfo;
+                                    h3 {
+                                        @include LeftRightH3;
+                                    }
+                                    .more-arrow {
+                                        @include more-arrow;
+                                        .icon {
+                                            font-size: 23px;
+                                        }
+                                    }
+                                }
+                            }
+                            .rightInfo {
+                                .comapny-submenu {
+                                    @include common-submenu-ul;
+                                    margin-top: -8px;
+                                    li {
+                                        background: none;
+                                        border: 0;
+                                        box-sizing: border-box;
+                                        margin: 1em;
+                                        padding: 1em 2em;
+                                        box-shadow: inset 0 0 0 1px grey;
+                                        font-size: inherit;
+                                        // font-weight: 700;
+                                        position: relative;
+                                        vertical-align: middle;
+                                        @include common-submenu-li;
+                                        width: 22% !important;
+                                        margin-bottom: 11px !important;
+                                        margin-right: 9px !important;
+                                        height: 50px !important;
+                                        .Icon {
+                                            min-width: 50px;
+                                            .img-first {
+                                                height: 35px !important;
+                                            }
+                                            .img-second {
+                                                height: 26.25px !important;
+                                            }
+                                            .img-third {
+                                                height: 26.25px !important;
+                                            }
+                                            .img-forth {
+                                                height: 31.5px !important;
+                                            }
+                                            .img-fifth {
+                                                height: 29.11px !important;
+                                            }
+                                            .img-six {
+                                                height: 30px !important;
+                                            }
+                                            .img-seven {
+                                                height: 30px !important;
+                                            }
+                                            .img-eight {
+                                                height: 30px !important;
+                                            }
+                                            .img-eight {
+                                                height: 30px !important;
+                                            }
+                                            .img-nine {
+                                                height: 30.91px !important;
+                                            }
+                                            .img-ten {
+                                                height: 28.28px !important;
+                                            }
+                                            .img-eleven {
+                                                height: 28.41px !important;
+                                            }
+                                            .img-twelve {
+                                                height: 31.5px !important;
+                                            }
+                                            .img-thirteen {
+                                                height: 26.83px !important;
+                                            }
+                                        }
+                                    }
+                                    li:hover a {
+                                        color: #e23434;
+                                        transition: all .5s;
+                                    }
+                                    li::before,
+                                    li::after {
+                                        box-sizing: inherit;
+                                        content: '';
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    .draw {
+                                        transition: color 0.25s;
+                                    }
+                                    .draw::before,
+                                    .draw::after {
+                                        border: 2px solid transparent;
+                                        width: 0;
+                                        height: 0;
+                                    }
+                                    .draw::before {
+                                        top: 0;
+                                        left: 0;
+                                    }
+                                    .draw::after {
+                                        bottom: 0;
+                                        right: 0;
+                                    }
+                                    .draw:hover {
+                                        color: #60daaa;
+                                    }
+                                    .draw:hover::before,
+                                    .draw:hover::after {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    .draw:hover::before {
+                                        border-top-color: #60daaa;
+                                        border-right-color: #60daaa;
+                                        transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+                                    }
+                                    .draw:hover::after {
+                                        border-bottom-color: #60daaa;
+                                        border-left-color: #60daaa;
+                                        transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+                                    }
+                                    .meet:hover {
+                                        color: #e23434;
+                                    }
+                                    .meet::after {
+                                        top: 0;
+                                        left: 0;
+                                    }
+                                    .meet:hover::before {
+                                        border-top-color: #e23434;
+                                        border-right-color: #e23434;
+                                    }
+                                    .meet:hover::after {
+                                        border-bottom-color: #e23434;
+                                        border-left-color: #e23434;
+                                        transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .bottomWrapper {
+                        margin-top: 1rem;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -ms-flex-wrap: wrap;
+                        flex-wrap: wrap;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                        min-height: 90px;
+                        .team-img {
+                            display: flex;
+                            justify-content: center;
+                            vertical-align: middle;
+                            align-items: center;
+                        }
+                        .team-content {
+                            width: 62%;
+                            padding-left: 3rem;
+                            border-left: solid 1px #524d4d;
+                            h3 {
+                                color: #d5d5d5;
+                                text-transform: uppercase;
+                                font-size: 1.6rem;
+                                margin-bottom: 0.5rem;
+                                font-weight: 500;
+                            }
+                            p {
+                                color: #bababb;
+                                margin-bottom: 0.5rem;
+                            }
+                            .team-links {
+                                padding-top: 0px !important;
+                                padding-bottom: 0px !important;
+                                margin-bottom: 0px !important;
+                                display: flex;
+                                flex-wrap: wrap;
+                                padding: 0;
+                                li {
+                                    display: flex;
+                                    background: #a6a9ab;
+                                    padding: 0 2rem;
+                                    margin-right: 5px;
+                                    text-align: center;
+                                    color: #212223 !important;
+                                    align-items: center;
+                                    height: 28px;
+                                    justify-content: center;
+                                    line-height: 1.8;
+                                    a {
+                                        color: #212223 !important;
+                                        span {
+                                            h2 {
+                                                font-size: 1.1rem;
+                                                font-weight: 400;
+                                                margin-bottom: 0;
+                                                display: inline-block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .hire {
+                            margin-right: 50px;
+                            a {
+                                border-bottom: none;
+                                background: #ffffff;
+                                padding: 13px 40px;
+                                margin: 1.5rem auto 0;
+                                min-width: 100%;
+                                text-align: center;
+                                width: 100%;
+                                display: inline-block;
+                                border-radius: 28px;
+                                text-transform: capitalize;
+                                color: #212223;
+                                font-weight: 600;
+                                cursor: pointer;
+                                z-index: 1;
+                                position: relative;
+                                -webkit-appearance: none;
+                                font-size: 1.8rem;
+                                font-weight: 500;
+                                -webkit-transition: 0.5s;
+                                transition: 0.5s;
+                                &:hover {
+                                    background: #e23434;
+                                    color: #ffffff;
+                                    -webkit-transition: 0.5s;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                //  we-work-with
+                .we-work-with {
+                    background-color: #212223;
+                    // color: #d5d5d5;
+                    position: fixed;
+                    top: 97px;
+                    background-image: url("..../../../../../../assets/images/header/dropdown-bg.png");
+                    background-repeat: no-repeat;
+                    background-position: bottom;
+                    /* width: 100%; */
+                    height: 873px;
+                    background-size: contain;
+                    .we-work {
+                        .dropdown-title {
+                            @include title;
+                        }
+                        .comapny-submenu {
+                            @include common-submenu-ul;
+                            margin: 0 0 20px;
+                            li {
+                                background: none;
+                                border: 0;
+                                box-sizing: border-box;
+                                margin: 1em;
+                                padding: 1em 2em;
+                                box-shadow: inset 0 0 0 1px grey;
+                                font-size: inherit;
+                                font-weight: 700;
+                                position: relative;
+                                vertical-align: middle;
+                                width: 23.5% !important;
+                                height: 52px;
+                                margin-bottom: 7px;
+                                margin-right: 7px;
+                                display: flex;
+                                align-items: center;
+                                flex-direction: row;
+                                padding: 0px 17px;
+                                position: relative;
+                                cursor: pointer;
+                                transition: 0.5s;
+                                a {
+                                    font-family: $primary-font;
+                                    font-weight: 400;
+                                    color: #d5d5d5;
+                                    font-size: 14.62px;
+                                }
+                                .Icon {
+                                    width: 63px;
+                                    // height: 30px;
+                                    margin-right: 3px;
+                                    img {
+                                        height: 50px;
+                                        // position: absolute;
+                                        // top: 2px;
+                                    }
+                                }
+                            }
+                            li:hover a {
+                                color: #e23434;
+                                transition: all .5s;
+                            }
+                            li::before,
+                            li::after {
+                                box-sizing: inherit;
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .draw {
+                                transition: color 0.25s;
+                            }
+                            .draw::before,
+                            .draw::after {
+                                border: 2px solid transparent;
+                                width: 0;
+                                height: 0;
+                            }
+                            .draw::before {
+                                top: 0;
+                                left: 0;
+                            }
+                            .draw::after {
+                                bottom: 0;
+                                right: 0;
+                            }
+                            .draw:hover {
+                                color: #60daaa;
+                            }
+                            .draw:hover::before,
+                            .draw:hover::after {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .draw:hover::before {
+                                border-top-color: #60daaa;
+                                border-right-color: #60daaa;
+                                transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+                            }
+                            .draw:hover::after {
+                                border-bottom-color: #60daaa;
+                                border-left-color: #60daaa;
+                                transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+                            }
+                            .meet:hover {
+                                color: #e23434;
+                            }
+                            .meet::after {
+                                top: 0;
+                                left: 0;
+                            }
+                            .meet:hover::before {
+                                border-top-color: #e23434;
+                                border-right-color: #e23434;
+                            }
+                            .meet:hover::after {
+                                border-bottom-color: #e23434;
+                                border-left-color: #e23434;
+                                transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+                            }
+                        }
+                    }
+                    .industry-serve {
+                        .dropdown-title {
+                            @include title;
+                        }
+                        .comapny-submenu {
+                            list-style-type: none;
+                            padding: 0px;
+                            margin: 0px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            li {
+                                //border: 1px solid grey;   
+                                width: 13.83% !important;
+                                height: 90px;
+                                // padding: 6px 0px;
+                                margin-bottom: 11px;
+                                margin-right: 9px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                padding: 0px 17px;
+                                position: relative;
+                                cursor: pointer;
+                                transition: 0.5s;
+                                color: white;
+                                background: none;
+                                border: 0;
+                                box-sizing: border-box;
+                                margin: 1em;
+                                padding: 4px 13px;
+                                box-shadow: inset 0 0 0 1px grey;
+                                // color: #f45e61;
+                                font-size: inherit;
+                                font-weight: 700;
+                                position: relative;
+                                vertical-align: middle;
+                                a {
+                                    font-family: $primary-font;
+                                    font-weight: 400;
+                                    color: #d5d5d5;
+                                    font-size: 11.7px;
+                                    text-align: center;
+                                    margin-top: 11px;
+                                }
+                                .Icon {
+                                    width: 45px;
+                                    min-width: 45px;
+                                    // height: 30px;
+                                    margin-right: 3px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    // img {
+                                    //     // width: 49px;
+                                    //     height: 36px;
+                                    //     @include filter-img-before;
+                                    // }
+                                    .img-first {
+                                        height: 43px;
+                                        @include filter-img-before;
+                                    }
+                                    .img-second {
+                                        height: 47px;
+                                        @include filter-img-before;
+                                    }
+                                    .img-third {
+                                        height: 40px;
+                                        @include filter-img-before;
+                                    }
+                                    .img-forth {
+                                        height: 32px;
+                                        @include filter-img-before;
+                                    }
+                                    .img-fifth {
+                                        height: 41px;
+                                        @include filter-img-before;
+                                    }
+                                    .img-six {
+                                        height: 32px;
+                                        @include filter-img-before;
+                                    }
+                                    .img-seven {
+                                        height: 40px;
+                                        @include filter-img-before;
+                                    }
+                                    .img-eight {
+                                        height: 41px;
+                                        @include filter-img-before;
+                                    }
+                                    .img-nine {
+                                        height: 45px;
+                                        @include filter-img-before;
+                                    }
+                                    .img-ten {
+                                        height: 36px;
+                                        @include filter-img-before;
+                                    }
+                                    .img-eleven {
+                                        height: 40px;
+                                        @include filter-img-before;
+                                    }
+                                    .img-twelve {
+                                        height: 42px;
+                                        @include filter-img-before;
+                                    }
+                                }
+                                &:hover .Icon .img-first {
+                                    //width: 49px;
+                                    height: 43px;
+                                    @include filter-img-after;
+                                }
+                                &:hover .Icon .img-second {
+                                    //width: 49px;
+                                    height: 47px;
+                                    @include filter-img-after;
+                                }
+                                &:hover .Icon .img-third {
+                                    //width: 49px;
+                                    height: 40px;
+                                    @include filter-img-after;
+                                }
+                                &:hover .Icon .img-forth {
+                                    //width: 49px;
+                                    height: 32px;
+                                    @include filter-img-after;
+                                }
+                                &:hover .Icon .img-fifth {
+                                    //width: 49px;
+                                    height: 41px;
+                                    @include filter-img-after;
+                                }
+                                &:hover .Icon .img-six {
+                                    //width: 49px;
+                                    height: 32px;
+                                    @include filter-img-after;
+                                }
+                                &:hover .Icon .img-seven {
+                                    //width: 49px;
+                                    height: 40px;
+                                    @include filter-img-after;
+                                }
+                                &:hover .Icon .img-eight {
+                                    //width: 49px;
+                                    height: 41px;
+                                    @include filter-img-after;
+                                }
+                                &:hover .Icon .img-nine {
+                                    //width: 49px;
+                                    height: 45px;
+                                    @include filter-img-after;
+                                }
+                                &:hover .Icon .img-ten {
+                                    //width: 49px;
+                                    height: 36px;
+                                    @include filter-img-after;
+                                }
+                                &:hover .Icon .img-eleven {
+                                    //width: 49px;
+                                    height: 40px;
+                                    @include filter-img-after;
+                                }
+                                &:hover .Icon .img-twelve {
+                                    //width: 49px;
+                                    height: 42px;
+                                    @include filter-img-after;
+                                }
+                            }
+                            li:hover a {
+                                color: #e23434;
+                                transition: all .5s;
+                            }
+                            li::before,
+                            li::after {
+                                box-sizing: inherit;
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .draw {
+                                transition: color 0.25s;
+                            }
+                            .draw::before,
+                            .draw::after {
+                                border: 2px solid transparent;
+                                width: 0;
+                                height: 0;
+                            }
+                            .draw::before {
+                                top: 0;
+                                left: 0;
+                            }
+                            .draw::after {
+                                bottom: 0;
+                                right: 0;
+                            }
+                            .draw:hover {
+                                color: #60daaa;
+                            }
+                            .draw:hover::before,
+                            .draw:hover::after {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .draw:hover::before {
+                                border-top-color: #60daaa;
+                                border-right-color: #60daaa;
+                                transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+                            }
+                            .draw:hover::after {
+                                border-bottom-color: #60daaa;
+                                border-left-color: #60daaa;
+                                transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+                            }
+                            .meet:hover {
+                                color: #e23434;
+                            }
+                            .meet::after {
+                                top: 0;
+                                left: 0;
+                            }
+                            .meet:hover::before {
+                                border-top-color: #e23434;
+                                border-right-color: #e23434;
+                            }
+                            .meet:hover::after {
+                                border-bottom-color: #e23434;
+                                border-left-color: #e23434;
+                                transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+                            }
+                        }
+                    }
+                    .industry-tagline {
+                        color: #d5d5d5;
+                        font-weight: 400;
+                        text-align: center;
+                        font-size: 1.8rem;
+                        margin-top: 1.5rem;
+                        span {
+                            display: inline-block;
+                            &:after {
+                                height: 2px;
+                                content: "";
+                                display: block;
+                                margin: 0.3rem auto;
+                                background: #e23434;
+                            }
+                        }
+                    }
+                }
+                
+                .technolgogy {
+                    background-color: #212223;
+                    // color: #d5d5d5;
+                    position: fixed;
+                    top: 97px;
+                    background-image: url("..../../../../../../assets/images/header/dropdown-bg.png");
+                    background-repeat: no-repeat;
+                    background-position: bottom;
+                    /* width: 100%; */
+                    height: 873px;
+                    background-size: contain;
+                    .techContainer {
+                        .dropdown-title {
+                            @include title;
+                        }
+                        .comapny-submenu {
+                            @include common-submenu-ul;
+                            padding-bottom: 20px;
+                            li {
+                                @include common-submenu-li;
+                                width: 18.4% !important;
+                                height: 55px !important;
+                                margin-right: 3px !important;
+                                margin-bottom: 20px !important;
+                                background: none;
+                                border: 0;
+                                box-sizing: border-box;
+                                margin: 1em;
+                                padding: 0px 14px;
+                                box-shadow: inset 0 0 0 1px grey;
+                                // color: #f45e61;
+                                font-size: inherit;
+                                font-weight: 700;
+                                position: relative;
+                                vertical-align: middle;
+                                .Icon {
+                                    // // width: 63px;
+                                    // min-width: 63px;
+                                    // height: 30px;
+                                    // margin-right: 3px;
+                                    min-width: 50px;
+                                    img {
+                                        // width: 49px;
+                                        height: 30px !important;
+                                    }
+                                }
+                            }
+                            li:hover a {
+                                color: #e23434;
+                                transition: all .5s;
+                            }
+                            li::before,
+                            li::after {
+                                box-sizing: inherit;
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .draw {
+                                transition: color 0.25s;
+                            }
+                            .draw::before,
+                            .draw::after {
+                                border: 2px solid transparent;
+                                width: 0;
+                                height: 0;
+                            }
+                            .draw::before {
+                                top: 0;
+                                left: 0;
+                            }
+                            .draw::after {
+                                bottom: 0;
+                                right: 0;
+                            }
+                            .draw:hover {
+                                color: #60daaa;
+                            }
+                            .draw:hover::before,
+                            .draw:hover::after {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .draw:hover::before {
+                                border-top-color: #60daaa;
+                                border-right-color: #60daaa;
+                                transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+                            }
+                            .draw:hover::after {
+                                border-bottom-color: #60daaa;
+                                border-left-color: #60daaa;
+                                transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+                            }
+                            .meet:hover {
+                                color: #e23434;
+                            }
+                            .meet::after {
+                                top: 0;
+                                left: 0;
+                            }
+                            .meet:hover::before {
+                                border-top-color: #e23434;
+                                border-right-color: #e23434;
+                            }
+                            .meet:hover::after {
+                                border-bottom-color: #e23434;
+                                border-left-color: #e23434;
+                                transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+                            }
+                        }
+                    }
+                    .enterprise {
+                        .dropdown-title {
+                            @include title;
+                        }
+                        .comapny-submenu {
+                            @include common-submenu-ul;
+                            padding-top: 13px;
+                            li {
+                                margin-right: 2px !important;
+                                margin-bottom: 20px !important;
+                                width: 23.5%;
+                                height: 52px;
+                                display: flex;
+                                align-items: center;
+                                flex-direction: row;
+                                padding: 0px 17px;
+                                position: relative;
+                                cursor: pointer;
+                                transition: 0.5s;
+                                //border: 1px solid grey;
+                                background: none;
+                                border: 0;
+                                box-sizing: border-box;
+                                margin: 1em;
+                                padding: 0px 14px;
+                                box-shadow: inset 0 0 0 1px grey;
+                                // color: #f45e61;
+                                font-size: inherit;
+                                font-weight: 700;
+                                position: relative;
+                                vertical-align: middle;
+                                a {
+                                    font-family: $primary-font;
+                                    font-weight: 400;
+                                    color: #d5d5d5;
+                                    font-size: 13.62px;
+                                }
+                                .Icon {
+                                    //width: 63px;
+                                    min-width: 52px;
+                                    // height: 30px;
+                                    // margin-right: 3px;
+                                    img {
+                                        // width: 49px;
+                                        height: 30px;
+                                    }
+                                }
+                                // &:hover a {
+                                //     color: #e23434;
+                                //     transition: all ease-in-out .5s;
+                                // }
+                                // &:hover {
+                                //     border: 1px solid #e23434;
+                                //     transition: all ease-in-out .5s;
+                                // }
+                            }
+                            li:hover a {
+                                color: #e23434;
+                                transition: all .5s;
+                            }
+                            li::before,
+                            li::after {
+                                box-sizing: inherit;
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .draw {
+                                transition: color 0.25s;
+                            }
+                            .draw::before,
+                            .draw::after {
+                                border: 2px solid transparent;
+                                width: 0;
+                                height: 0;
+                            }
+                            .draw::before {
+                                top: 0;
+                                left: 0;
+                            }
+                            .draw::after {
+                                bottom: 0;
+                                right: 0;
+                            }
+                            .draw:hover {
+                                color: #60daaa;
+                            }
+                            .draw:hover::before,
+                            .draw:hover::after {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .draw:hover::before {
+                                border-top-color: #60daaa;
+                                border-right-color: #60daaa;
+                                transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+                            }
+                            .draw:hover::after {
+                                border-bottom-color: #60daaa;
+                                border-left-color: #60daaa;
+                                transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+                            }
+                            .meet:hover {
+                                color: #e23434;
+                            }
+                            .meet::after {
+                                top: 0;
+                                left: 0;
+                            }
+                            .meet:hover::before {
+                                border-top-color: #e23434;
+                                border-right-color: #e23434;
+                            }
+                            .meet:hover::after {
+                                border-bottom-color: #e23434;
+                                border-left-color: #e23434;
+                                transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+                            }
+                        }
+                    }
+                }
+                
+                .rupesh {
+                    position: relative;
+                    // // close
+                    .closeMe {
+                        position: absolute;
+                        right: 32px;
+                        top: 32px;
+                        width: 9px;
+                        height: 9px;
+                        opacity: 0.3;
+                    }
+                    /* .close:hover {
+            opacity: 1;
+          } */
+                    .closeMe:before,
+                    .closeMe:after {
+                        position: absolute;
+                        left: 15px;
+                        content: ' ';
+                        height: 16px;
+                        width: 2px;
+                        background-color: black;
+                    }
+                    .closeMe:before {
+                        transform: rotate(45deg);
+                    }
+                    .closeMe:after {
+                        transform: rotate(-45deg);
+                    }
+                }
+                
+                // close icon ends
+                // Onclick event of Main Headers Endss...
+                //Coding For Material
+                .mat-focused .mat-form-field-label {
+                    color: #2d2d2d !important;
+                }
+                
+                .mat-form-field-ripple {
+                    background-color: red !important;
+                }
+                
+                .mat-form-field-underline {
+                    background-color: #2d2d2d !important;
+                }
+                
+                .basic-container {
+                    margin: 0px;
+                    padding: 0px;
+                }
+                
+                // .myPage {
+                //     height: 100vh;
+                //     background-color: #dbfff3;
+                //     display: flex;
+                //     justify-content: center;
+                //     align-items: center;
+                // }
+                // .myBox {
+                //     display: flex;
+                //     align-items: center;
+                //     height: 200px;
+                //     width: 200px;
+                //     background-color: #36a7ff;
+                //     justify-content: center;
+                //     background: rgb(68, 179, 198);
+                //     background: linear-gradient(160deg, rgba(68, 179, 198, 1) 0%, rgba(159, 241, 178, 1) 50%, rgb(129, 221, 185) 100%);
+                // }
+                .ref {
+                    background-color: red;
+                    color: white;
+                    font-size: 14px;
+                }
+                
+                // .rupesh {
+                // background-color: red;
+                //position: relative;
+                .downArrow {
+                    position: relative;
+                    top: -1px;
+                    content: "";
+                    display: inline-block;
+                    width: 9px;
+                    height: 9px;
+                    border-right: 1px solid grey;
+                    border-top: 1px solid grey;
+                    transform: rotate(135deg);
+                    // margin-right: 0.5em;
+                    margin-left: 2px;
+                }
+                
+                // .downArrow:after{
+                //     position: relative;
+                //     top: -5px;
+                //     content: "";
+                //     display: inline-block;
+                //     width: 12px;
+                //     height: 12px;
+                //     border-right: 0.1em solid grey;
+                //     border-top: 0.1em solid grey;
+                //     transform: rotate(135deg);
+                //     margin-right: 0.5em;
+                //     margin-left: 1.0em;  
+                // }
+                .close {
+                    //position: relative;
+                    // right: 32px;
+                    // top: 32px;
+                    // width: 32px;
+                    // height: 32px;
+                    // position: relative;
+                    // top: 45px;
+                    // left: 88px;
+                    // bottom: 0px;
+                    // right: 0px;
+                    // opacity: 0.3;
+                    position: relative;
+                    top: 25px;
+                    left: -64px;
+                    bottom: 0px;
+                    right: 0;
+                    opacity: 0.3;
+                }
+                
+                .close:hover {
+                    opacity: 1;
+                }
+                
+                .close:before,
+                .close:after {
+                    position: absolute;
+                    left: 15px;
+                    content: ' ';
+                    height: 16px;
+                    width: 2px;
+                    background-color: white;
+                }
+                
+                .close:before {
+                    transform: rotate(45deg);
+                }
+                
+                .close:after {
+                    transform: rotate(-45deg);
+                }
+                
+                // .cls {
+                //     contain: "close";
+                //     width: 15px;
+                //     height: 15px;
+                // }
+                //}
+                .tag-remove:before {
+                    content: "x";
+                    color: grey;
+                    font-weight: 300;
+                    font-family: $primary-font;
+                    font-size: 14px;
+                    margin-left: 2px;
+                }

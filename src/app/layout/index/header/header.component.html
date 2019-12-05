@@ -1,0 +1,458 @@
+<header>
+    <!-- Top header -->
+    <div class="container-fluid top-header">
+        <div class="header-wrapper container d-flex justify-content-between">
+            <ul class="left-info d-flex align-self-center">
+                <!-- language -->
+                <li class="language" (click)="openLang()" *ngIf="!isLang">
+                    <div class="show">
+                        <!-- <i class="fa fa-globe"></i>&nbsp; -->
+                        <span class="icon-earth"></span>&nbsp;
+                        <span class="lang">EN</span>&nbsp;&nbsp;
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li *ngIf="isLang" class="onSelectLang" (click)="closeLang()"> <span class="icon-cancel"></span></li>
+
+                <!-- Search -->
+                <li class="search" (click)="openSearch()" *ngIf="!isSearch">
+                    <span class="icon-search"></span>
+                </li>
+                <li *ngIf="isSearch" class="onSelectSearch" (click)="closeSearch()"> <span class="icon-cancel"></span></li>
+
+
+                <!-- account-->
+                <li class="account" (click)="openAccount()" *ngIf="!isAccount">
+                    <!-- <a routerLink="."><i class="fa fa-italic" aria-hidden="true"></i></a> -->
+                    <a href="javascript:void(0)" routerLink="."><span class="icon-info"></span></a>
+                </li>
+                <li *ngIf="isAccount" class="onSelectSearch" (click)="closeAccount()"> <span class="icon-cancel"></span></li>
+
+            </ul>
+
+            <ul class="right-info d-flex align-self-center">
+                <li class="career"><a [routerLink]="">careers</a></li>
+                <li class="contact"><a [routerLink]="">contact us</a></li>
+                <li class="country" (click)="openCountry()">
+                    <span class="india-flag"></span>&nbsp;
+                    <span class="phone-no">+91 22 40500600</span>&nbsp;
+                    <i [ngClass]="caretDown" *ngIf="isIcon" aria-hidden="true"></i>
+                    <i [ngClass]="caretUp" *ngIf="!isIcon" aria-hidden="true"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Main header -->
+    <div class="container-fluid main-header">
+        <div class="container main-header-wrapper">
+            <div class="logo">
+                <a href="" routerLink=""><img src="../../../../assets/images/logo/logo.png" alt="Neosoftlogo"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li class="whoWeAre nav-list" [ngClass]="isWhoWeAre ? 'isWhoWeAreActive active' : 'isWhoWeAreNotActive'">
+                        <!-- <a routerLink="." (click)="whoWeAre()">Who We Are<i class="icon" [ngClass]="iconWhoWeAre" aria-hidden="true"></i></a> -->
+                        <a routerLink="." (click)="whoWeAre()">Who We Are <span class="icon" [ngClass]="isWhoWeAre ? 'icon-cancel' : 'icon-down-open-big'"></span></a>
+                        <!-- <a routerLink="." *ngIf="isWhoWeAre">Who We Are&nbsp;<span style="font-size: 18px;">&times;</span></a> -->
+                        <!-- <i class="fa fa-times" id="close" style="font-size:14px" aria-hidden="true"></i> -->
+                        <!-- <i class="fa fa-times"></i> -->
+                    </li>
+                    <li class="nav-list" [ngClass]="isWhatWeDo ? 'isWhatWeDoActive active' : 'isWhatWeDoNotActive'">
+                        <!-- <a routerLink="." (click)="whatWeDo()">What We Do<i class="icon" [ngClass]="iconWhatWeDo" aria-hidden="true"></i></a> -->
+                        <a routerLink="." (click)="whatWeDo()">What We Do <span class="icon" [ngClass]="isWhatWeDo ? 'icon-cancel' : 'icon-down-open-big'"></span></a>
+                        <!-- <a routerLink="." *ngIf="isWhatWeDo">What We Do&nbsp;<span style="font-size: 18px;">&times;</span></a> -->
+
+                    </li>
+                    <li class="nav-list" [ngClass]="isWeWorkWith ? 'isWeWorkWithActive active' : 'isWeWorkWithNotActive'">
+                        <a routerLink="." (click)="weWorkWith()">We Work With <span class="icon" [ngClass]="isWeWorkWith ? 'icon-cancel' : 'icon-down-open-big'"></span></a>
+                        <!-- <a routerLink="." (click)="weWorkWith()">We Work With<i class="icon" [ngClass]="iconWeWorkWith" aria-hidden="true"></i></a> -->
+                        <!-- <a routerLink="." *ngIf="isWeWorkWith">We Work With&nbsp;<span style="font-size: 18px;">&times;</span></a> -->
+                    </li>
+
+                    <li class="nav-list" [ngClass]="isTechnology ? 'isTechnology active' : 'isTechnologyNotActive'">
+                        <a routerLink="." (click)="technologly()">Technology <span class="icon" [ngClass]="isTechnology ? 'icon-cancel' : 'icon-down-open-big'"></span></a>
+                        <!-- <a routerLink="." (click)="technologly()">Technology<i class="icon" [ngClass]="iconTechnology" aria-hidden="true"></i></a> -->
+                        <!-- <a routerLink="." *ngIf="isTechnology">Technology&nbsp;<span style="font-size: 18px;">&times;</span></a> -->
+                    </li>
+                    <!-- <li><a routerLink=".">Technolgies <i class="fa fa-angle-down" aria-hidden="true"></i></a></li> -->
+
+                </ul>
+            </div>
+            <div class="cmmi">
+                <p>CMMi</p>
+                <p>LEVEL</p>
+                <p class="count">5</p>
+            </div>
+            <div class="exp">
+                <p class="count">23<sup>+</sup></p>
+                <p>YEAR OF</p>
+                <p>EXCELLENCE</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Onclick Events Header TOP BAR start -->
+
+<!-- Language -->
+<div class="container-fluid lg" [ngClass]="isLang ? 'isLangActive' : 'isLangNotActive'">
+    <!-- *ngIf="isLang" -->
+    <div class="container lg-wrapper">
+        <ul class="lg-navLinks d-flex align-self-center align-items-baseline">
+            <li class="select text-danger">Select a language</li>
+            <li class="english"><a href="">English</a></li>
+            <li class="deutsch"><a href="">Deutsch</a></li>
+            <li class="china"><a href="">日本語</a></li>
+            <li class="francais"><a href="">Francais</a></li>
+            <li class="sspanol"><a href="">Espanol</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Search -->
+<div class="container-fluid searchTopBar" [ngClass]="isSearch ? 'activeSearch' : 'notactiveSearch'">
+    <!-- *ngIf="isSearch"  -->
+    <div class="container searchTopBar-wrapper">
+        <form action="">
+            <div class="example-container">
+                <mat-form-field>
+                    <input matInput class="matInput" placeholder="Enter your search term">
+                </mat-form-field>
+            </div>
+            <div class="form-group submit-btn">
+                <input type="submit" class="btn" value="SEARCH">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Account -->
+<div class="container-fluid account" [ngClass]="isAccount ? 'accountActive' : 'accountNotActive'">
+
+    <div class="container login-drop">
+        &nbsp;
+        <h3 class="login-info-title">WHAT SETS US APART, <span> BY THE NUMBERS </span></h3>
+        <div class="company-achive clearfix">
+
+            <div class="achieve-block">
+                <div class="circle-content">
+                    <div class="founded-circle"> <span class="circle-img"></span> <span>Founded<br>in 1996</span></div>
+                    <div class="found-tagline"> <span class="year">23+</span> <span class="exllence">Years of Excellence In Outsourcing Services</span> <span class="clearfix"></span></div>
+                </div>
+                <div class="achieve-block-content last-block">
+                    <div class="achive-bottom"> <span class="left"></span> <span class="achive-bottom-content"> 85% <span class="repeat-business">REPEAT BUSINESS</span> </span> <span class="right"></span></div>
+                </div>
+            </div>
+
+            <div class="achieve-block1">
+                <div class="achieve-block-content1">
+                    <div class="block-data"> <span class="tag">5500+ <br>Websites </span> <span class="caption">DESIGN &amp; DEVELOPED</span></div>
+                </div>
+                <div class="achieve-block-content2">
+                    <div class="block-data">
+                        <div class="icon-block-cont">
+                            <div class="sec-icon"></div>
+                            <div class="sec-icon-content"> <span class="tag">CMMI</span> <span class="caption">Level 5 Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achieve-block2">
+                <div class="achieve-block-content1">
+                    <div class="block-data"> <span class="tag">20+ MILLION</span> <span class="caption">DEVELOPMENT HOURS</span></div>
+                </div>
+                <div class="achieve-block-content2">
+                    <div class="block-data">
+                        <div class="icon-block-cont">
+                            <div class="sec-icon"></div>
+                            <div class="sec-icon-content"> <span class="tag">ISO</span> <span class="caption">Certified</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achieve-block3">
+                <div class="achieve-block-content1">
+                    <div class="block-data"> <span class="tag">750+<br>MOBILE</span> <span class="caption">APPS PUBLISHED</span></div>
+                </div>
+                <div class="achieve-block-content2">
+                    <div class="block-data">
+                        <div class="icon-block-cont">
+                            <div class="sec-icon"></div>
+                            <div class="sec-icon-content"> <span class="tag">2000+</span> <span class="caption">Employees</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achieve-block4">
+                <div class="achieve-block-content1">
+                    <div class="block-data"> <span class="tag">100+<br>CROSS</span> <span class="caption">PLATFORM APPS</span></div>
+                </div>
+                <div class="achieve-block-content2">
+                    <div class="block-data">
+                        <div class="icon-block-cont">
+                            <div class="sec-icon"></div>
+                            <div class="sec-icon-content"> <span class="tag">1500+</span> <span class="caption">happy<br>customers</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid login-procudure">
+        <div class="container login-procudure-container">
+            <div class="steps1">
+                <div class="step-icon"></div>
+                <span class="steps-text">Prepare checklist of <strong>your project needs</strong></span>
+            </div>
+            <div class="steps2">
+                <div class="step-icon"></div>
+                <span class="steps-text">Fill out <br> <strong>enquiry form</strong></span>
+            </div>
+            <div class="steps3">
+                <div class="step-icon"></div>
+                <span class="steps-text">Consult with <br> <strong>our team</strong></span>
+            </div>
+
+            <div class="steps4">
+                <a href="#" class="step-btn">GET STARTED </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- country -->
+<div class="container-fluid countryTopBar" *ngIf="isCountry">
+    <!-- // *ngIf="isCountry"  // [ngClass]="isCountry? 'countryActive' : 'countryNotActive'" -->
+    <div class="container countryTopBar-wrapper">
+        <ul class="d-flex justify-content-start">
+            <li class="first">Give us a call</li>
+            <li class="second"><span class="flag-india"></span> <span><a class="firstAnchor" href="">+91 22 40500600</a></span></li>
+            <li><span class="flag-us"></span> <span><a href="">+1 347 829 5496</a></span></li>
+            <li><span class="flag-uk"></span> <span><a href="">+44 203 355 7938</a></span></li>
+            <li><span class="flag-au"></span> <span><a href="">+61 29 191 6546</a></span></li>
+        </ul>
+    </div>
+</div>
+<!-- Onclick Events Header TOP BAR Ends -->
+
+
+<!-- Onclick Events Main header start -->
+<div class="container-fluid who-we-are" *ngIf="isWhoWeAre">
+    <div class="container topWrapper">&nbsp;
+        <div class="row topWrapperRow">
+            <div class="col-lg-6 firstCol">
+                <h3 class="company-title">Company</h3>
+
+                <ul class="comapny-submenu">
+                    <li routerLink="." class="draw meet"><span class="Icon"><img class="img-first" src="../../../../assets/images/header/mainheader/who-we-are/overview-icon.png" alt=""></span><a href="#">Overview</a></li>
+                    <li routerLink="." class="draw meet"><span class="Icon"><img class="img-second" src="../../../../assets/images/header/mainheader/who-we-are/clientele-icon.png" alt=""></span><a href="#">Clientle</a></li>
+                    <li routerLink="." class="draw meet"><span class="Icon"><img class="img-third" src="../../../../assets/images/header/mainheader/who-we-are/corporate-icon.png" alt=""></span><a href="#">Corporate Fact</a></li>
+                    <li routerLink="." class="draw meet"><span class="Icon"><img class="img-forth" src="../../../../assets/images/header/mainheader/who-we-are/certification-icon.png" alt=""></span><a href="#">Certification</a></li>
+                    <li routerLink="." class="draw meet"><span class="Icon"><img class="img-fifth" src="../../../../assets/images/header/mainheader/who-we-are/partner-icon-top.png" alt=""></span><a href="#">Partners</a></li>
+                    <li routerLink="." class="draw meet"><span class="Icon"><img class="img-six" src="../../../../assets/images/header/mainheader/who-we-are/infrastructure-icon.png" alt=""></span><a href="#">Infrastructure</a></li>
+                    <li routerLink="." class="draw meet"><span class="Icon"><img class="img-seven" src="../../../../assets/images/header/mainheader/who-we-are/global-icon.png" alt=""></span><a href="#">Global Presence</a></li>
+                    <li routerLink="." class="draw meet"><span class="Icon"><img class="img-eight" src="../../../../assets/images/header/mainheader/who-we-are/CRS.png" alt=""></span><a href="#">CSR</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 secondCol">
+                <h3 class="company-title">Why Neosoft ?</h3>
+                <ul class="cmpInfo">
+                    <li>CMMi Level 5 Rated</li>
+                    <li>ISO Certified (Quality & Data <br/>Security)</li>
+                    <li>2000+ Professionals</li>
+                    <li>5500+ Websites Design & <br/>Developed</li>
+                    <li>850+ Mobile Apps Published</li>
+                    <li>20+ Million Development Hours</li>
+                    <li>1,00,000+ SQ. FT.<br/> Development Centers</li>
+                </ul>
+                <p><a class="vision-mission-btn" routerLink="." href="#">Vision &amp; Mission</a></p>
+            </div>
+            <div class="col-lg-3 thirdCol">
+                <h3 class="company-title">WE ARE HIRING</h3>
+                <p class="workInfo"><span>Working at NeoSOFT <br/>Technologies is an exuberant  <br/>experience for professionals who  <br/>have the attitude to walk an extra  <br/>mile and convert opportunities <br/> into possibilities.</span></p>
+                <p class="grow"><span>Grow with the Leaders!</span></p>
+                <p class="opening-para"><a class="opening-btn" href="#" routerLink=".">OPPORTUNITIES @ NeoSOFT</a></p>
+            </div>
+        </div>
+
+    </div>
+    <div class="container bottomWrapper d-flex justify-content-start">
+        <div class="quick-link">
+            <h3 class="quick-link-title">QUICK LINKS</h3>
+        </div>
+        <div class="quick-link-content">
+            <ul>
+                <li><a href="">Blogs</a></li>
+                <li><a href="">Engagement Models</a></li>
+                <li><a href="">Development Models</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- What we do -->
+<div class="container-fluid what-we-do" *ngIf="isWhatWeDo">
+    &nbsp;
+    <div class="container topWrapper">
+        &nbsp;
+        <h3 class="dropdown-title">What we do</h3>
+
+        <div class="container whoAreInfo">
+            <div class="leftInfo">
+                <div class="leftInfoDiv1">
+                    <h3><span>END-TO-END </span> <br> PRODUCT <br> ENGINEERING</h3>
+                    <a class="more-arrow" href="https://www.neosofttech.com/end-to-end-product-engineering">
+                        <i class="fa fa-angle-right icon"></i>
+                    </a>
+                </div>
+                <div class="leftInfoDiv2">
+                    <h3><span>ENTERPRISE </span> <br> DIGITAL <br> TRANSFORMATION</h3>
+                    <a class="more-arrow" href="https://www.neosofttech.com/end-to-end-product-engineering">
+                        <i class="fa fa-angle-right icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="rightInfo">
+                <ul class="comapny-submenu">
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-first" src="../../../../assets/images/header/mainheader/what-we-do/what-we-mobile-app-top-icon.png" alt=""></span><a href="#">Mobile Application</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-second" src="../../../../assets/images/header/mainheader/what-we-do/what-we-web-top-icon.png" alt=""></span><a href="#">Web Development</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-third" src="../../../../assets/images/header/mainheader/what-we-do/what-we-cloud-top-icon.png" alt=""></span><a href="#">Cloud Computing</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-forth" src="../../../../assets/images/header/mainheader/what-we-do/ai-ml_0.png" alt=""></span><a href="#">AI & ML</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-fifth" src="../../../../assets/images/header/mainheader/what-we-do/what-we-bigdata-top-icon.png" alt=""></span><a href="#">Analytics and Big Data</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-six" src="../../../../assets/images/header/mainheader/what-we-do/what-we-iot-top-icon.png" alt=""></span><a href="#">Internet of Things(IOT)</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-seven" src="../../../../assets/images/header/mainheader/what-we-do/what-we-menuchain-top-icon.png" alt=""></span><a href="#">Blockchain</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-eight" src="../../../../assets/images/header/mainheader/what-we-do/devops-icon.png" alt=""></span><a href="#">DevOps</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-nine" src="../../../../assets/images/header/mainheader/what-we-do/what-we-qa-top-icon.png" alt=""></span><a href="#">QA & Testing</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-ten" src="../../../../assets/images/header/mainheader/what-we-do/sap1_0.png" alt=""></span><a href="#">SAP</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-eleven" src="../../../../assets/images/header/mainheader/what-we-do/what-we-uxui-top-icon.png" alt=""></span><a href="#">UX/UI Design</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-twelve" src="../../../../assets/images/header/mainheader/what-we-do/menu-software-consulting_1_0.png" alt=""></span><a href="#">Software Consulting</a></li>
+                    <li class="draw meet" routerLink="."><span class="Icon"><img class="img-thirteen" src="../../../../assets/images/header/mainheader/what-we-do/what-we-internet-top-icon.png" alt=""></span><a href="#">Internet Marketing</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container bottomWrapper">
+        &nbsp;
+        <div class="team-img">
+            <img src="../../../../assets/images/header/mainheader/what-we-do/user-image.png" alt="user-image">
+        </div>
+        <div class="team-content">
+            <h3>Team Augmentation</h3>
+            <p>Great work needs great talent &amp; skills. We help save time and money.</p>
+            <ul class="team-links">
+                <li><a href="#"><i class="icon"></i> <span>Resource as a Service (<h2>Offshore, Onsite &amp; Hybrid</h2>)</span></a></li>
+                <li><a href="#"><i class="icon"></i> <span>ODC / BOT </span></a></li>
+            </ul>
+
+        </div>
+        <div class="hire">
+            <a href="#" routerLink=".">Hire Now</a>
+        </div>
+    </div>
+</div>
+
+<!-- We work With -->
+<div class="container-fluid we-work-with" *ngIf="isWeWorkWith">
+    &nbsp;
+    <div class="container we-work">
+        <h3 class="dropdown-title">We Work With</h3>
+        <ul class="comapny-submenu">
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-first" src="../../../../assets/images/header/mainheader/we-work-with/icon-enterprise_0.png" alt=""></span><a href="#">Enterprises</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-seven" src="../../../../assets/images/header/mainheader/we-work-with/agencies-icon-top.png" alt=""></span><a href="#">Agencies</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-third" src="../../../../assets/images/header/mainheader/we-work-with/startup-icon-top.png" alt=""></span><a href="#">Startups</a></li>
+        </ul>
+    </div>
+    <div class="container industry-serve">
+        <h3 class="dropdown-title">Industry Served</h3>
+        <ul class="comapny-submenu">
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-first" src="../../../../assets/images/header/mainheader/we-work-with/banking-and-finance-top.png" alt=""></span><a href="#">Banking & Finance</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-second" src="../../../../assets/images/header/mainheader/we-work-with/ecommerce-and-retail-top.png" alt=""></span><a href="#">Ecommerce & Retail</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-third" src="../../../../assets/images/header/mainheader/we-work-with/education-and-elearning-top.png" alt=""></span><a href="#">Eduction & Elearning</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-forth" src="../../../../assets/images/header/mainheader/we-work-with/government-top.png" alt=""></span><a href="#">Goverment / Semi Goverment</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-fifth" src="../../../../assets/images/header/mainheader/we-work-with/healthcare-top.png" alt=""></span><a href="#">Healthcare</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-six" src="../../../../assets/images/header/mainheader/we-work-with/insurance-top.png" alt=""></span><a href="#">Insurance</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-seven" src="../../../../assets/images/header/mainheader/we-work-with/it-top.png" alt=""></span><a href="#">IT and Concultant</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-eight" src="../../../../assets/images/header/mainheader/we-work-with/manufacturing-top.png" alt=""></span><a href="#">Manufacturing</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-nine" src="../../../../assets/images/header/mainheader/we-work-with/media-and-entertainment-top.png" alt=""></span><a href="#">Media & Entertainement</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-ten" src="../../../../assets/images/header/mainheader/we-work-with/news-and-publication-top.png" alt=""></span><a href="#">News & Publication</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-eleven" src="../../../../assets/images/header/mainheader/we-work-with/products-top.png" alt=""></span><a href="#">Startups</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img class="img-twelve" src="../../../../assets/images/header/mainheader/we-work-with/telecom-top.png" alt=""></span><a href="#">Telecom</a></li>
+        </ul>
+        <h4 class="industry-tagline">Delivered over <span>6500+ </span> projects across <span> 22+ </span> industries, worldwide</h4>
+    </div>
+</div>
+
+<!-- Technology -->
+<div class="container-fluid technolgogy" *ngIf="isTechnology">&nbsp;
+    <div class="container techContainer">
+        <h3 class="dropdown-title">Technolgies</h3>
+        <ul class="comapny-submenu">
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/ms-top-icon.png" alt=""></span><a href="#">Microsoft</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/os-top-icon.png" alt=""></span><a href="#">Open-Source</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/java-top-icon.png" alt=""></span><a href="#">Java</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/mobile-icon.png" alt=""></span><a href="#">Mobile</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/frontend-top-icon.png" alt=""></span><a href="#">Frontend</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/database-top-icon.png" alt=""></span><a href="#">Databases</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/big-data-top-icon.png" alt=""></span><a href="#">Big Data & Analytics</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/iot-top-icon.png" alt=""></span><a href="#">Internet Of Things</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/cloud-top-icon.png" alt=""></span><a href="#">Cloud Infrastructure</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/menuchain_1.png" alt=""></span><a href="#">Block Chain</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/devops-icon_0.png" alt=""></span><a href="#">DevOps</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/sap1_1.png" alt=""></span><a href="#">SAP</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/ai-ml_1.png" alt=""></span><a href="#">AI & ML</a></li>
+        </ul>
+    </div>
+    <div class="container enterprise">
+        <h3 class="dropdown-title">Enterprise Solution</h3>
+        <ul class="comapny-submenu">
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/enterprise/crm-top-icon.png" alt=""></span><a href="#">Customer Relationship Management(CRM)</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/enterprise/ecom-top-icon.png" alt=""></span><a href="#">Ecommerce Solution</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/enterprise/cms-top-icon.png" alt=""></span><a href="#">Content Management System(CMS)</a></li>
+            <li class="draw meet" routerLink="."><span class="Icon"><img src="../../../../assets/images/header/mainheader/technology/enterprise/enterprise-top-icon.png" alt=""></span><a href="#">Enterprise Resource Planning(ERP)</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Onclick Events Main header ends -->
+
+<!-- <div class="container rupesh">
+    rupesh
+    <br><br> -->
+
+<!-- <span [ngClass]="{'closeMe':isWeWorkWith,'closeMe':!isWeWorkWith}"></span>
+    <span [ngClass]="'angleDown'"></span>
+    -->
+<!-- <span [ngClass]="'downArrow'"></span>
+    <i [ngClass]="'downArrow'"></i>
+    <i [ngClass]="'cross'"></i> -->
+<!-- <span [ngClass]="'cross'"></span> -->
+<!-- <span [ngClass]="'close'"></span>
+    <i [ngClass]="'close'"></i> -->
+<!-- <a href="#" class="close"></a> -->
+<!-- <img src="../../../../assets/images/header/menu-arrow.svg" alt=""> -->
+<!-- <a href="" [ngClass]="'close'"></a> -->
+<!-- <a href="">Who We are <span [ngClass]="'close'"></span></a> -->
+<!-- <a href="">Who We are <span [ngClass]="{'close':isCheck,'downArrow':!isCheck}"></span></a> -->
+<!-- <a href="">Who We are <span [ngClass]="isCheck ? 'close' : 'downArrow'"></span></a> -->
+
+<!-- 
+</div> -->
+<!-- <div class="container">
+    <span class="icon-youtube-alt"></span>
+    <span class="icon-search"></span>
+    <span class="icon-android"></span>
+    <span class="icon-info"></span>
+
+
+</div> -->

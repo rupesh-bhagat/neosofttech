@@ -1,0 +1,181 @@
+li {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em 2em;
+    box-shadow: inset 0 0 0 1px grey;
+    // color: #f45e61;
+    font-size: inherit;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+    @include common-submenu-li;
+}
+
+li::before,
+li::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.draw {
+    transition: color 0.25s;
+}
+
+.draw::before,
+.draw::after {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+.draw::before {
+    top: 0;
+    left: 0;
+}
+
+.draw::after {
+    bottom: 0;
+    right: 0;
+}
+
+.draw:hover {
+    color: #60daaa;
+}
+
+.draw:hover::before,
+.draw:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.draw:hover::before {
+    border-top-color: #60daaa;
+    border-right-color: #60daaa;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.draw:hover::after {
+    border-bottom-color: #60daaa;
+    border-left-color: #60daaa;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+.meet:hover {
+    color: #e23434;
+}
+
+.meet::after {
+    top: 0;
+    left: 0;
+}
+
+.meet:hover::before {
+    border-top-color: #e23434;
+    border-right-color: #e23434;
+}
+
+.meet:hover::after {
+    border-bottom-color: #e23434;
+    border-left-color: #e23434;
+    transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+}
+
+// Down ARRow:======display: inline-block;
+// vertical-align: middle;
+// margin: 0 0.5rem;
+// position: relative;
+// background-image: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/menu-arrow.svg);
+// background-repeat: no-repeat;
+// background-position: 94% 12px;
+// padding-right: 18px;
+// background-size: 1.5em;
+// cursor: pointer;
+// padding: 0.3rem 2rem 0.3rem 1.5rem;
+.Icon {
+    .img-first {
+        height: 35px !important;
+    }
+    .img-second {
+        height: 26.25px !important;
+    }
+    .img-third {
+        height: 26.25px !important;
+    }
+    .img-forth {
+        height: 31.5px !important;
+    }
+    .img-fifth {
+        height: 29.11px !important;
+    }
+    .img-six {
+        height: 30px !important;
+    }
+    .img-seven {
+        height: 30px !important;
+    }
+    .img-eight {
+        height: 30px !important;
+    }
+    .img-eight {
+        height: 30px !important;
+    }
+    .img-nine {
+        height: 30.91px !important;
+    }
+    .img-ten {
+        height: 28.28px !important;
+    }
+    .img-eleven {
+        height: 28.41px !important;
+    }
+    .img-twelve {
+        height: 31.5px !important;
+    }
+    .img-thirteen {
+        height: 26.83px !important;
+    }
+}
+
+///////////////@include
+//Git Access..............
+//ICOMOON.. ByAnmol
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?udbf2n');
+    src: url('fonts/icomoon.eot?udbf2n#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?udbf2n') format('truetype'), url('fonts/icomoon.woff?udbf2n') format('woff'), url('fonts/icomoon.svg?udbf2n#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info:before {
+    content: "\e900";
+}
+
+.icon-search:before {
+    content: "\e986";
+}
+
+.icon-cancel-circle:before {
+    content: "\ea0d";
+}

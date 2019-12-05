@@ -1,0 +1,285 @@
+@mixin title {
+    padding-bottom: 13px;
+    font-size: 22.4px;
+    text-transform: uppercase;
+    color: #ffffff;
+    &:after {
+        height: 2px;
+        width: 5rem;
+        background: #e23434;
+        content: "";
+        display: block;
+        margin-top: 0.5rem;
+    }
+}
+
+@mixin common-btn {
+    background: #f5a820;
+    padding: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 81%;
+    display: inline-block;
+    border-radius: 28px;
+    text-transform: uppercase;
+    color: #212223 !important;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    -webkit-appearance: none;
+    font-size: 12.6px;
+    font-weight: 500;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+@mixin common-btn-hover {
+    background: #ffffff;
+    color: #212223 !important;
+}
+
+@mixin padding-marging {
+    padding: 0px;
+    margin: 0px;
+}
+
+@mixin common-submenu-ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+@mixin common-submenu-li {
+    // border: 1px solid grey;
+    width: 42%;
+    height: 52px;
+    margin-bottom: 7px;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0px 17px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    a {
+        font-family: $primary-font;
+        font-weight: 400;
+        color: #d5d5d5;
+        font-size: 14.62px;
+    }
+    .Icon {
+        min-width: 63px;
+        //height: 30px;
+        img {
+            height: 35px;
+        }
+    }
+}
+
+@mixin filter-img-before {
+    filter: brightness(0) invert(1);
+    webkit-filter: brightness(0) invert(1);
+    webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+@mixin filter-img-after {
+    filter: brightness(1) invert(0);
+    webkit-filter: brightness(0) invert(0);
+    webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+@mixin quick-links {
+    padding: 0px 19px;
+    background-color: #ffffff;
+}
+
+@mixin block-data {
+    display: flex;
+    vertical-align: middle;
+    height: 132px;
+    text-align: center;
+    width: 210px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+@mixin tag {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-family: "Lato-Black";
+}
+
+@mixin caption {
+    width: 100%;
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+}
+
+@mixin icon-block-cont {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@mixin sec-icon-content {
+    width: 65%;
+    display: inline-block;
+    float: left;
+    text-align: left;
+    padding-left: 8px;
+    color: #000000;
+}
+
+// Mixin for login procudure 
+@mixin steps {
+    width: 25%;
+    float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    padding-left: 18px;
+    height: 42px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    vertical-align: middle;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+}
+
+@mixin stepsAfter {
+    position: absolute;
+    display: block;
+    margin-top: 19px;
+    height: 43px;
+    width: 20px;
+    content: " ";
+    right: 1px;
+    content: " ";
+    -webkit-transform: skew(-30deg);
+    background: transparent;
+    border-right: 3px solid white;
+    background: transparent;
+    background: transparent;
+    transform: skew(-30deg);
+}
+
+@mixin stepsBefore {
+    display: block;
+    margin-top: -21px;
+    height: 40px;
+    width: 20px;
+    content: " ";
+    position: absolute;
+    right: 0px;
+    -webkit-transform: skew(30deg);
+    background: transparent;
+    border-right: 3px solid white;
+    background: transparent;
+    background: transparent;
+    transform: skew(30deg);
+}
+
+@mixin step-text {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: auto;
+    padding-right: 20px;
+    padding-left: 9px;
+    vertical-align: middle;
+    float: left;
+}
+
+@mixin more-arrow {
+    border-radius: 100%;
+    background: #212223;
+    cursor: pointer;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    right: 0.8rem;
+    z-index: 0;
+    bottom: 0.8rem;
+    text-align: center;
+    color: #f5a820;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+@mixin LeftRightInfo {
+    background: #f5a820;
+    padding: 1rem;
+    color: #212223;
+    position: relative;
+    height: 122px;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@mixin LeftRightH3 {
+    font-size: 19.5px;
+    font-family: 'Opensans-ExtaBold';
+    margin: 0 0 6.5px;
+    padding: 0 0 6.5px;
+    span {
+        font-weight: 400;
+        font-family: 'Lato-Regular'!important;
+    }
+}
+
+// we work with
+//span underline
+@mixin span-underline {}

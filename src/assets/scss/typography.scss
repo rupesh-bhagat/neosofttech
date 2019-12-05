@@ -1,0 +1,11 @@
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+b,
+strong {
+    font-weight: 700;
+}

@@ -1,0 +1,32 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    font-size: 14px;
+    font-family: $primary-font;
+    font-weight: 400;
+    // color: $secondary-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    background: red;
+    color: white;
+}
+
+ ::selection {
+    background: red;
+    color: white;
+}
